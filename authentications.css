@@ -1,0 +1,73 @@
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.35);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: 2rem;
+    border: 1px solid #888;
+    width: 30rem;
+    height: fit-content;
+    border-radius: 8px;
+}
+
+input{
+    font-family: 'Smooch Sans', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.sign_up_input, .log_in_input {
+    border: none;
+    outline: none;
+    width: 90%;
+    padding: 0.5rem;
+    margin: 0.5rem 0;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    border-radius: 5px;
+    letter-spacing: 0.1rem;
+    color: black;
+    border-bottom: 1px solid #ccc;
+    transition: border-bottom 0.3s ease-in-out;
+}
+
+
+.sign_up_input:focus{
+    border-bottom: 1px solid #30cfd0;
+}
+
+.log_in_input:focus{
+    border-bottom: 1px solid #330867;
+}
+
+.auth_submit {
+    width: 100%;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 5px;
+    margin-top: 1rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.auth_submit:hover {
+    cursor: pointer;
+    color: white;
+}
+
+.login_button:hover{
+    background-color: #330867;
+}
+
+.signup_button:hover{
+    background-color: #30cfd0;
+}

@@ -1,28 +1,65 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Financia</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Smooch+Sans:wght@100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="main.css">
-  </head>
-  <body>
-    <div class="header">
-      <h1>FINANCIA</h1>
-    </div>
-    <div class="body_container">
-        <div class="container">
-        <div>
-          <h2>What is Financia?</h2>
-          <p>Financia is a web application that helps you manage your finances. It allows you to keep track of your income and expenses, and provides you with a summary of your financial situation. Financia also provides you with a budgeting tool that helps you plan your spending and save money.</p>
+
+<head>
+  <title>Financia</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Smooch+Sans:wght@100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="main.css">
+  <link rel="stylesheet" type="text/css" href="authentications.css">
+</head>
+
+<body>
+  <div class="header">
+    <h1>FINANCIA</h1>
+  </div>
+  <div class="body_container">
+    <div class="container">
+      <div>
+        <h2>What is Financia?</h2>
+        <p>Financia is a web application that helps you manage your finances. It allows you to keep track of
+          your income and expenses, and provides you with a summary of your financial situation. Financia also
+          provides you with a budgeting tool that helps you plan your spending and save money.</p>
+      </div>
+      <div class="get_started">
+        <h2>Get Started</h2>
+        <p>Sign up for an account and start managing your finances today!</p>
+        <div class="button_container">
+          <button class="sign_up" onclick="showSignupModal()">Sign Up</button>
+          <button class="log_in" onclick="showLoginModal()">Log In</button>
         </div>
-        <div class="get_started">
-          <h2>Get Started</h2>
-          <p>Sign up for an account and start managing your finances today!</p>
-          
-        </div>
+      </div>
     </div>
-    
-  </body>
+    <!-- Signup Modal -->
+    <div id="signupModal" class="modal">
+      <div class="modal-content">
+        <h2>Sign Up</h2>
+        <!-- Add signup form here -->
+        <form id="signupForm">
+          <input type="text" id="username" placeholder="Username" class="sign_up_input" required>
+          <input type="email" id="email" placeholder="Email" class="sign_up_input" required>
+          <input type="password" id="password" placeholder="Password" class="sign_up_input" required>
+          <input type="date" id="dob" placeholder="Date of Birth" class="sign_up_input" required>
+          <input type="submit" value="Sign Up" class="auth_submit signup_button">
+        </form>
+      </div>
+    </div>
+
+    <!-- Login Modal -->
+    <div id="loginModal" class="modal">
+      <div class="modal-content">
+        <h2>Log In</h2>
+        <!-- Add login form here -->
+        <form id="loginForm">
+          <input type="email" id="email" placeholder="Email" class="log_in_input" required>
+          <input type="password" id="password" placeholder="Password" class="log_in_input" required>
+          <input type="submit" value="Log In" class="auth_submit login_button">
+        </form>
+      </div>
+    </div>
+
+    <script src="authentication.js"></script>
+</body>
+
 </html>
